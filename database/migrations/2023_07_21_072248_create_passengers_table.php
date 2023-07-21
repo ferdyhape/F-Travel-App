@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('name', 75);
-            $table->string('email')->unique();
-            $table->string('phone_number', 13)->unique();
-            $table->string('avatar')->default('avatar/default.png');
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('passengers', function (Blueprint $table) {
+            $table->id();
+            $table->foreignUuid('booking_id')->constrained('bookings')->onDelete('cascade');
+            $table->string('name');
+            $table->string('phone_number', 13);
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('passengers');
     }
 };

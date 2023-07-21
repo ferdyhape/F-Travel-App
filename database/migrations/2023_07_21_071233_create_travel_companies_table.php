@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('travel_companies', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name', 75);
+            $table->string('address', 125);
             $table->string('email')->unique();
             $table->string('phone_number', 13)->unique();
-            $table->string('avatar')->default('avatar/default.png');
-            $table->string('password');
-            $table->rememberToken();
+            $table->longText('description');
+            $table->string('logo')->default('logo/default.png');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('travel_companies');
     }
 };

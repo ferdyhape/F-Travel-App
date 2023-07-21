@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('travel_trips', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name', 75);
-            $table->string('email')->unique();
-            $table->string('phone_number', 13)->unique();
-            $table->string('avatar')->default('avatar/default.png');
-            $table->string('password');
-            $table->rememberToken();
+            $table->time('departure_time');
+            $table->time('arrival_time');
+            $table->string('departure_city', 50);
+            $table->string('destination_city', 50);
+            $table->decimal('price', 10, 2);
+            $table->foreignUuid('travel_company_id')->constrained('travel_companies')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('travel_trips');
     }
 };
