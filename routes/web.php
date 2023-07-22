@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TravelTripController;
 use App\Models\TravelTrip;
 
 /*
@@ -16,14 +17,21 @@ use App\Models\TravelTrip;
 */
 
 Route::group(['middleware' => ['auth']], function () {
-});
-Route::get('/', function () {
-    return view('landing_page.index');
-});
-Route::get('/trip', function () {
-    return view('landing_page.trip', [
-        'trips' => TravelTrip::all()
-    ]);
+    Route::get('/', function () {
+        return view('landing_page.index');
+    });
+    Route::get('/trip', function () {
+        return view('landing_page.trip', [
+            'trips' => TravelTrip::all()
+        ]);
+    });
+
+    Route::group(['middleware' => ['check.company']], function () {
+        Route::resource('/my-company/trip', TravelTripController::class);
+        Route::get('/my-company', function () {
+            return redirect('/my-company/trip');
+        });
+    });
 });
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
