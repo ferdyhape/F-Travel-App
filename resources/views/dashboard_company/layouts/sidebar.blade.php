@@ -12,8 +12,8 @@
                         <i class="bx bx-bus nav_icon"></i>
                         <span class="nav_name">Perjalanan</span>
                     </a>
-                    <a href="{{ url('my-company/update-company') }}"
-                        class="nav_link {{ Request::is('my-company/update-company') ? 'active' : '' }}">
+                    <a href="{{ url('my-company/profile') }}"
+                        class="nav_link {{ Request::is('my-company/profile') ? 'active' : '' }}">
                         <i class="bx bx-edit nav_icon"></i>
                         <span class="nav_name">Update Company</span>
                     </a>

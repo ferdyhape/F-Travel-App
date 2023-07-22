@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone_number', 13)->unique();
             $table->longText('description');
-            $table->string('logo')->default('logo/default.png');
+            $table->string('logo')->default('company/default_logo.png');
             $table->timestamps();
         });
     }

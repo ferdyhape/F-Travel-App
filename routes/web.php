@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TravelCompanyController;
 use App\Http\Controllers\TravelTripController;
 use App\Models\TravelTrip;
 
@@ -26,11 +27,13 @@ Route::group(['middleware' => ['auth']], function () {
         ]);
     });
 
-    Route::group(['middleware' => ['check.company']], function () {
-        Route::resource('/my-company/trip', TravelTripController::class);
-        Route::get('/my-company', function () {
+    Route::group(['prefix' => 'my-company', 'middleware' => ['check.company']], function () {
+        Route::get('/', function () {
             return redirect('/my-company/trip');
         });
+
+        Route::resource('/trip', TravelTripController::class);
+        Route::resource('/profile', TravelCompanyController::class)->only(['index', 'update']);
     });
 });
 
