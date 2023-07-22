@@ -1,5 +1,5 @@
 <!-- ==========  Footer Start ========== -->
-<footer id="footer" class="p-70px-t p-30px-b footer">
+<footer id="footer" class=" footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">

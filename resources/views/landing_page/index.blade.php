@@ -71,7 +71,7 @@
             <div class="row justify-content-md-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="service-box text-center p-60px lg-p-40px md-p-30px sm-p-20px m-10px-t m-10px-b">
-                        <i class="icofont-law-document"></i>
+                        <i class="icofont-road"></i>
                         <h4>Perjalanan Lengkap</h4>
                         <p>
                             Dengan perjalanan yang lengkap, anda dapat memilih perjalanan yang sesuai dengan kebutuhan
@@ -81,7 +81,7 @@
                 <!-- End single service -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-box text-center p-60px lg-p-40px md-p-30px sm-p-20px m-10px-t m-10px-b">
-                        <i class="icofont-code"></i>
+                        <i class="icofont-money"></i>
                         <h4>Harga ekonomis</h4>
                         <p>
                             Kami pastikan harga yang kami tawarkan adalah harga yang terbaik untuk anda
@@ -91,7 +91,7 @@
                 <!-- End single service -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-box text-center p-60px lg-p-40px md-p-30px sm-p-20px m-10px-t m-10px-b">
-                        <i class="icofont-file-avi-mp4"></i>
+                        <i class="icofont-users"></i>
                         <h4>Pesan untuk orang lain</h4>
                         <p>
                             Anda dapat memesan perjalanan untuk orang lain dengan mudah, anda bisa bersenang-senang
@@ -116,7 +116,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="how-it-box text-center p-15px-lr p-50px-tb m-10px-t m-10px-b">
-                        <i class="icofont-iphone"></i>
+                        <i class="icofont-list"></i>
                         <h4>Pilih Trip</h4>
                         <p>
                             Pilih trip yang anda inginkan sesuai dengan kebutuhan anda
@@ -131,7 +131,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="how-it-box text-center p-15px-lr p-50px-tb m-10px-t m-10px-b">
-                        <i class="icofont-refresh"></i>
+                        <i class="icofont-files-stack"></i>
                         <h4>Masukkan Identitas</h4>
                         <p>
                             Masukkan identitas anda dengan benar agar kami dapat menghubungi anda
@@ -146,7 +146,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="how-it-box text-center p-15px-lr p-50px-tb m-10px-t m-10px-b">
-                        <i class="icofont-hand-drag1"></i>
+                        <i class="icofont-ui-check"></i>
                         <h4>Booking Selesai</h4>
                         <p>
                             Booking anda telah selesai, anda dapat melihat detail booking anda di halaman profile

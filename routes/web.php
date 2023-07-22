@@ -32,14 +32,6 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     // Route for user non company
-    Route::get('/', function () {
-        return view('landing_page.index');
-    });
-    Route::get('/trip', function () {
-        return view('landing_page.trip', [
-            'trips' => TravelTrip::all()
-        ]);
-    });
     Route::resource('booking', BookingController::class)->except(['confirmBooking']);
     Route::group(['prefix' => 'booking'], function () {
         Route::get('pre-book/{id}', [BookingController::class, 'preBooking'])->name('pre-booking');
@@ -52,7 +44,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-
+Route::get('/', function () {
+    return view('landing_page.index');
+});
+Route::get('/trip', function () {
+    return view('landing_page.trip', [
+        'trips' => TravelTrip::all()
+    ]);
+});
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'authenticate'])->name('login.process');
 Route::get('register', [AuthController::class, 'register'])->name('register');

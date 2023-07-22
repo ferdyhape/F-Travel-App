@@ -14,14 +14,14 @@
                     </li>
                     <li><a class="nav-link {{ Request::is('trip') ? 'active' : '' }}"
                             href="{{ url('trip') }}">Trip</a></li>
-                    <li><a class="nav-link {{ Request::is('booking') ? 'active' : '' }}"
-                            href="{{ url('booking') }}">Bookingan Saya</a></li>
                     @if (auth()->check())
                         @if (auth()->user()->travelCompany)
                             <li><a class="nav-link" href="{{ url('my-company') }}">Travel Saya</a></li>
                         @else
                             <li><a class="nav-link" href="{{ url('register-company') }}">Daftarkan Perusahaan</a></li>
                         @endif
+                        <li><a class="nav-link {{ Request::is('booking') ? 'active' : '' }}"
+                                href="{{ url('booking') }}">Bookingan Saya</a></li>
                         <li>
                             <form id="logout-form" action="{{ url('logout') }}" method="post">
                                 @csrf
