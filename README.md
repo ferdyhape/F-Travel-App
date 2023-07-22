@@ -1,5 +1,14 @@
 # Travel App
 
+## Table of Contents
+
+1. [Creator](#creator)
+2. [Description](#description)
+3. [Feature](#feature)
+4. [Database Design (ERD)](#database-design-erd)
+5. [How To Use](#how-to-use)
+6. [About Creator](#about-creator)
+
 ## Creator
 Name: ``` Ferdy Hahan Pradana ```
 
@@ -7,6 +16,22 @@ Campus: ``` Politeknik Negeri Malang ```
 
 ## Description
 - This repository was created to fulfill the duties of a prospective intern as a Web Developer at PT Adma Digital Solusi.
+
+## Feature 
+1.  Authentication (Login, Register, Logout)
+2.  Booking Travel Trip
+3.  Cancel Booking Travel Trip
+4.  Upload Payment Proof
+5.  Register New Company
+6.  Dashboard Travel Company
+7.  Manage Travel Trip
+8.  Update Company Profile
+9.  Manage Payment
+
+## Database Design (ERD)
+<p align="center">
+  <img src="https://github.com/ferdyhape/F-Travel-App/assets/75787853/a5e1afbf-eb02-4c10-910c-80e5f33645f7" width="90%" height="90%">
+</p>
 
 ## How To Use
 1.  Clone this repository
