@@ -23,11 +23,9 @@
                         <li><a class="nav-link {{ Request::is('booking') ? 'active' : '' }}"
                                 href="{{ url('booking') }}">Bookingan Saya</a></li>
                         <li>
-                            <form id="logout-form" action="{{ url('logout') }}" method="post">
-                                @csrf
-                            </form>
                             <a class="nav-link" href="#"
                                 onclick="document.getElementById('logout-form').submit();">Logout</a>
+
                         </li>
                     @else
                         <li><a class="nav-link" href="{{ url('login') }}">Login</a></li>
@@ -37,5 +35,8 @@
             </div>
         </div>
     </nav>
+    <form id="logout-form" action="{{ url('logout') }}" method="post">
+        @csrf
+    </form>
 </header>
 <!-- ========== Header Nav End ========== -->

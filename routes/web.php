@@ -20,7 +20,7 @@ use App\Models\TravelTrip;
 */
 
 Route::group(['middleware' => ['auth']], function () {
-    // Route for user company
+    // Route for admin company
     Route::group(['prefix' => 'my-company', 'middleware' => ['check.company']], function () {
         Route::get('/', function () {
             return redirect('/my-company/trip');
@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('booking', BookingController::class)->only(['confirmBooking']);
     });
 
-    // Route for user non company
+    // Route for user
     Route::resource('booking', BookingController::class)->except(['confirmBooking']);
     Route::group(['prefix' => 'booking'], function () {
         Route::get('pre-book/{id}', [BookingController::class, 'preBooking'])->name('pre-booking');
@@ -52,6 +52,7 @@ Route::get('/trip', function () {
         'trips' => TravelTrip::all()
     ]);
 });
+
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'authenticate'])->name('login.process');
 Route::get('register', [AuthController::class, 'register'])->name('register');
