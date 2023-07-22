@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="container my-5 d-flex justify-content-center">
-            <div class="card col-5">
+            <div class="card col-10 col-sm-8 col-md-6 col-xl-4">
                 <div class="card-body">
                     <form action="{{ url('register') }}" method="post" enctype="multipart/form-data">
                         @csrf

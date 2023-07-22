@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="container my-5 d-flex justify-content-center">
-            <div class="card col-5">
+            <div class="card col-10 col-sm-8 col-md-6 col-xl-4">
                 <img class="card-img-top" src="{{ asset('landing_page/img/login.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                     <form action="{{ url('login') }}" method="post">
