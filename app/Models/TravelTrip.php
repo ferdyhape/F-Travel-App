@@ -29,4 +29,9 @@ class TravelTrip extends Model
     {
         return $this->belongsTo(TravelCompany::class, 'travel_company_id', 'id');
     }
+
+    public function booking()
+    {
+        return $this->hasMany(Booking::class, 'travel_trip_id', 'id');
+    }
 }
