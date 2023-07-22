@@ -17,7 +17,6 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->foreignUuid('travel_trip_id')->constrained('travel_trips')->onDelete('cascade');
             $table->foreignUuid('user_id')->constrained('users')->onDelete('cascade');
-            $table->date('date');
             $table->integer('total_passenger');
             $table->decimal('total_price', 10, 2);
             $table->enum('status', ['Pending', 'Success', 'Canceled']);
