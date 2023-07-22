@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!-- Page Title -->
-<title>Appiya - App Landing Page</title>
+<title>F-Travel App</title>
 <!-- Favicon -->
 <link rel="icon" href="{{ asset('landing_page/favicon.ico') }}" />
 <!---IcoFont Icon font-->

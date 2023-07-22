@@ -6,7 +6,7 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbarCodeply" data-offset="70">
-    @include('landing_page.layouts.preload')
+    {{-- @include('landing_page.layouts.preload') --}}
 
     @include('landing_page.layouts.navbar')
 

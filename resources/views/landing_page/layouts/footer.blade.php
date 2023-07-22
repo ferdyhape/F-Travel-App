@@ -4,23 +4,19 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="footer-top text-center p-30px-tb">
-                    <a class="footer-logo" href=""><img src="{{ asset('Landing_Page/img/logo.png') }}"
-                            alt=""></a>
-                    <p>May indulgence difficulty ham can put especially. Bringing remember for supplied her why was
-                        confined. Middleton principle did she procuring extensive believing add.</p>
                     <div class="social-network">
-                        <a href="#"><i class="social-icon icofont-facebook"></i></a>
-                        <a href="#"><i class="social-icon icofont-twitter"></i></a>
-                        <a href="#"><i class="social-icon icofont-google-plus"></i></a>
-                        <a href="#"><i class="social-icon icofont-dribbble"></i></a>
-                        <a href="#"><i class="social-icon icofont-linkedin"></i></a>
-                        <a href="#"><i class="social-icon icofont-instagram"></i></a>
-                        <a href="#"><i class="social-icon icofont-pinterest"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/ferdy-hahan-pradana/"><i
+                                class="social-icon icofont-linkedin"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/ferdyhape"><i
+                                class="social-icon icofont-instagram"></i></a>
+                        <a target="_blank" href="https://www.github.com/ferdyhape"><i
+                                class="social-icon icofont-github"></i></a>
                     </div>
                 </div>
                 <div class="footer-copyright p-30px-tb text-center">
-                    <p>Copyright &copy; Appiya 2022. All Rights Reserved. Made with <i class="icofont-heart"></i>
-                        by <a href="#">ThemeAtelier</a></p>
+                    <p>Copyright &copy; Ferdy 2023, All Rights Reserved. Made with
+                        by <a target="_blank" href="https://www.linkedin.com/in/ferdy-hahan-pradana/">Ferdy Hahan
+                            Pradana</a></p>
                 </div>
             </div>
         </div>
