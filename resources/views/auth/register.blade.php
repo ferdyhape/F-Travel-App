@@ -1,64 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('landing_page.layouts.app')
+@section('content')
+    <section id="page-header" class="p-150px-t  p-80px-b sm-p-100px-t sm-p-40px-b">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="white-text">Register</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5 d-flex justify-content-center">
+            <div class="card col-5">
+                <div class="card-body">
+                    <form action="{{ url('register') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        @method('POST')
+                        <div class="form-group">
+                            <label for="exampleInputName">Nama</label>
+                            <input type="text" class="form-control" id="exampleInputName" name="name"
+                                placeholder="Masukkan nama">
+                        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @include('sweetalert::alert')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Alamat Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" name="email"
+                                aria-describedby="emailHelp" placeholder="Masukkan alamat email">
+                        </div>
 
-<body>
-    <h2>Register Page</h2>
+                        <div class="form-group">
+                            <label for="exampleInputPhoneNumber">Nomor Telepon</label>
+                            <input type="text" class="form-control" id="exampleInputPhoneNumber" name="phone_number"
+                                placeholder="Masukkan nomor telepon">
+                        </div>
 
-    <form action="{{ url('register') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-            @error('name')
-                <div>{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            @error('email')
-                <div>{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label for="phone_number">Phone Number</label>
-            <input type="text" name="phone_number" id="phone_number">
-            @error('phone_number')
-                <div>{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label for="avatar">Avatar</label>
-            <input type="file" name="avatar" id="avatar">
-            @error('avatar')
-                <div>{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-            @error('password')
-                <div>{{ $message }}</div>
-            @enderror
-        </div>
-        <div>
-            <label for="password_confirmation">Password Confirmation</label>
-            <input type="password" name="password_confirmation" id="password_confirmation">
-            @error('password_confirmation')
-                <div>{{ $message }}</div>
-            @enderror
-        </div>
-        <button type="submit">Register</button>
-    </form>
-</body>
+                        <div class="form-group">
+                            <label for="exampleInputAvatar">Avatar</label>
+                            <input type="file" class="form-control-file" id="exampleInputAvatar" name="avatar">
+                        </div>
 
-</html>
+                        <div class="form-group">
+                            <label for="exampleInputPassword">Kata Sandi</label>
+                            <input type="password" class="form-control" id="exampleInputPassword" name="password"
+                                placeholder="Masukkan kata sandi">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputConfirmPassword">Konfirmasi Kata Sandi</label>
+                            <input type="password" class="form-control" id="exampleInputConfirmPassword"
+                                name="password_confirmation" placeholder="Masukkan kembali kata sandi">
+                        </div>
+
+                        <input type="submit" class="btn btn-primary w-100" value="Daftar">
+                        <p class="mt-3">
+                            Sudah punya akun? <a href="{{ url('login') }}" style="font-weight: 600">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
