@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TravelCompanyController;
 use App\Http\Controllers\TravelTripController;
 use App\Models\TravelTrip;
@@ -35,6 +36,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/trip', TravelTripController::class);
         Route::resource('/profile', TravelCompanyController::class)->only(['index', 'update']);
     });
+    Route::resource('/booking', BookingController::class);
+    Route::get('/pre-book/{id}', [BookingController::class, 'preBooking'])->name('pre-booking');
+    Route::post('/payment/{id}', [BookingController::class, 'storePayment'])->name('payment');
 });
 
 Route::get('login', [AuthController::class, 'login'])->name('login');

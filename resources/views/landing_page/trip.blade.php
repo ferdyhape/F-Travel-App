@@ -59,9 +59,10 @@
                                         {{ $trip->seat }}
                                     </p>
                                 </div>
-                                <button class="btn btn-primary w-100 mt-3" {{ auth()->check() ? '' : 'disabled' }}>
+                                <a href="pre-book/{{ $trip->id }}" class="btn btn-primary text-white w-100 mt-3"
+                                    {{ auth()->check() ? '' : 'disabled' }}>
                                     Booking
-                                </button>
+                                </a>
                             </div>
                         </article>
                     </div>

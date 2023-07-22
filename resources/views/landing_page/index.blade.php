@@ -22,7 +22,7 @@
                         dengan mudah dan menyenangkan.
                     </p>
                     <div class="hero-btn-wrapper">
-                        <a href="#" class="btn btn-default animated-btn rounded">Lihat Perjalanan</a>
+                        <a href="{{ url('trip') }}" class="btn btn-default animated-btn rounded">Lihat Perjalanan</a>
                     </div>
                 </div>
                 <div class="col-md-6 p-100px-t p-50px-b md-p-10px-t">
