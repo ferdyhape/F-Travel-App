@@ -30,6 +30,7 @@ class TravelTripSeeder extends Seeder
                     'arrival_time' => $arrival_hours . ':00:00',
                     'departure_city' => $city[array_rand($city)],
                     'destination_city' => $city[array_rand($city)],
+                    'departure_date' => now()->addDays($i),
                     'price' => $price[rand(0, count($price) - 1)],
                     'seat' => 50,
                     'travel_company_id' => $travel->id,
