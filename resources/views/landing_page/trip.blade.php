@@ -18,11 +18,13 @@
                     <div class="col-lg-4">
                         <article class="page-content">
                             <div class="blog-post-img">
-                                <img src="{{ asset('storage/' . $trip->image_trip) }}" alt="blog-img">
+                                <img src="{{ asset('storage/' . $trip->image_trip) }}" alt="blog-img"
+                                    style="width:350px; height: 200px; object-fit: cover;">
                                 <div class="blog-tag">
                                     <a href="#">{{ $trip->travelCompany->name }}</a>
                                 </div>
                             </div>
+
                             <!-- End feature image -->
                             <div class="p-4 card-trip">
                                 <div class="d-flex justify-content-between mb-0" style="font-size: 19px; font-weight: 600">
