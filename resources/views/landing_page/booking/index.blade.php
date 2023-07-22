@@ -75,11 +75,11 @@
                                     <div class="d-flex justify-content-between gap-2">
                                         <a href="{{ url('booking/' . $booking->id) }}"
                                             class="btn btn-primary text-white w-100 mr-3 mt-3">Bayar</a>
-                                        <form action="{{ url('booking/' . $booking->id) }}" method="POST">
+                                        <form action="{{ url('booking/cancel/' . $booking->id) }}" method="POST">
                                             @csrf
-                                            @method('DELETE')
+                                            @method('POST')
                                             <button type="submit"
-                                                class="btn btn-danger text-white w-100 mt-3">Cancel</button>
+                                                class="btn btn-danger text-white w-100 mt-3">Batal</button>
                                         </form>
                                     </div>
                                 @elseif($booking->status == 'Success' || $booking->payment_proof != null)

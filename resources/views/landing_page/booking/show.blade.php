@@ -110,7 +110,7 @@
                     </div>
                     @if ($booking->status == 'Pending' && $booking->payment_proof == null)
                         <hr>
-                        <form action="{{ url('payment/' . $booking->id) }}" method="post"
+                        <form action="{{ url('booking/payment/' . $booking->id) }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             @method('POST')

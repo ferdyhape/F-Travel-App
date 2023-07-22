@@ -19,12 +19,15 @@
                     @if (auth()->check())
                         @if (auth()->user()->travelCompany)
                             <li><a class="nav-link" href="{{ url('my-company') }}">Travel Saya</a></li>
+                        @else
+                            <li><a class="nav-link" href="{{ url('register-company') }}">Daftarkan Perusahaan</a></li>
                         @endif
                         <li>
-                            <form action="{{ url('logout') }}" method="post">
+                            <form id="logout-form" action="{{ url('logout') }}" method="post">
                                 @csrf
-                                <button type="submit" class="border-0 bg-transparent nav-link">Logout</button>
                             </form>
+                            <a class="nav-link" href="#"
+                                onclick="document.getElementById('logout-form').submit();">Logout</a>
                         </li>
                     @else
                         <li><a class="nav-link" href="{{ url('login') }}">Login</a></li>

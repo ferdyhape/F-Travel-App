@@ -50,7 +50,8 @@
                         terkini serta peta interaktif untuk mengikuti rute bus secara akurat. Nikmati penawaran promosi dan
                         diskon menarik, serta layanan pelanggan 24/7 yang siap membantu Anda.
                     </p>
-                    <a href="#" class="btn btn-default btn-filled animated-btn">Booking perjalanan anda!</a>
+                    <a href="{{ url('trip') }}" class="btn btn-default btn-filled animated-btn">Booking perjalanan
+                        anda!</a>
                 </div>
             </div>
         </div>
@@ -157,106 +158,4 @@
         </div>
     </section>
     <!-- ==========  How it works End ========== -->
-    <!-- ==========  Latest Blog Start ========== -->
-    <section id="blog" class="p-100px-tb gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 offset-sm-2">
-                    <div class="section-title text-center m-50px-b">
-                        <h2>How it works</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row  justify-content-md-center">
-                <div class="col-lg-4 col-md-6">
-                    <article class="page-content">
-                        <div class="blog-post-img">
-                            <img src="{{ asset('landing_page/img/blog/4.jpg') }}" alt="">
-                            <div class="blog-tag">
-                                <a href="#">Apps UI</a>
-                            </div>
-                        </div>
-                        <!-- End feature image -->
-                        <div class="blog-content">
-                            <div class="post-meta m-15px-b">
-                                <ul>
-                                    <li><a href="#"><i class="icofont-user-alt-5"></i> Appiya</a></li>
-                                    <li><a href="#"><i class="icofont-calendar"></i> 08 Nov. 2022</a></li>
-                                    <li><a href="#"><i class="icofont-speech-comments"></i> 05 Comments</a></li>
-                                </ul>
-                            </div>
-                            <!-- End post meta -->
-                            <a href="single-blog.html">
-                                <h2 class="m-25px-b">Top inspirational apps UI for you 2019</h2>
-                            </a>
-                            <p>Far curiosity incommode now led smallness allowance. Favour bed assure son things yet.
-                                She consisted consulted elsewhere happiness disposing household any old the. Widow downs
-                                you new shade drift hopes small.</p>
-                            <a class="read-more" href="single-blog.html">Read more</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- End Single Blog -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="page-content">
-                        <div class="blog-post-img">
-                            <img src="{{ asset('landing_page/img/blog/5.jpeg') }}" alt="">
-                            <div class="blog-tag">
-                                <a href="#">GooglePlay</a>
-                            </div>
-                        </div>
-                        <!-- End feature image -->
-                        <div class="blog-content">
-                            <div class="post-meta m-15px-b">
-                                <ul>
-                                    <li><a href="#"><i class="icofont-user-alt-5"></i> Appiya</a></li>
-                                    <li><a href="#"><i class="icofont-calendar"></i> 08 Nov. 2022</a></li>
-                                    <li><a href="#"><i class="icofont-speech-comments"></i> 05 Comments</a></li>
-                                </ul>
-                            </div>
-                            <!-- End post meta -->
-                            <a href="single-blog.html">
-                                <h2 class="m-25px-b">Trendy Google apps you should check 2019</h2>
-                            </a>
-                            <p>Far curiosity incommode now led smallness allowance. Favour bed assure son things yet.
-                                She consisted consulted elsewhere happiness disposing household any old the. Widow downs
-                                you new shade drift hopes small.</p>
-                            <a class="read-more" href="single-blog.html">Read more</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- End Single Blog -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="page-content">
-                        <div class="blog-post-img">
-                            <img src="{{ asset('landing_page/img/blog/1.jpeg') }}" alt="">
-                            <div class="blog-tag">
-                                <a href="#">AppFeatures</a>
-                            </div>
-                        </div>
-                        <!-- End feature image -->
-                        <div class="blog-content">
-                            <div class="post-meta m-15px-b">
-                                <ul>
-                                    <li><a href="#"><i class="icofont-user-alt-5"></i> Appiya</a></li>
-                                    <li><a href="#"><i class="icofont-calendar"></i> 08 Nov. 2022</a></li>
-                                    <li><a href="#"><i class="icofont-speech-comments"></i> 05 Comments</a></li>
-                                </ul>
-                            </div>
-                            <!-- End post meta -->
-                            <a href="single-blog.html">
-                                <h2 class="m-25px-b">Booming news: Google play apps has been relese</h2>
-                            </a>
-                            <p>Far curiosity incommode now led smallness allowance. Favour bed assure son things yet.
-                                She consisted consulted elsewhere happiness disposing household any old the. Widow downs
-                                you new shade drift hopes small.</p>
-                            <a class="read-more" href="single-blog.html">Read more</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- End Single Blog -->
-            </div>
-        </div>
-    </section>
-    <!-- ==========  Latest Blog End ========== -->
 @endsection

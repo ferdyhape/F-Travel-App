@@ -73,7 +73,7 @@ class BookingController extends Controller
             ]);
         }
 
-        return redirect("/booking/$createdBooking->id")->with('success', 'Berhasil melakukan booking, lanjutkan pembayaran');
+        return redirect("/booking/$createdBooking->id")->with('toast_success', 'Berhasil melakukan booking, lanjutkan pembayaran');
     }
 
     /**
@@ -148,6 +148,28 @@ class BookingController extends Controller
         ]);
         $booking->save();
 
-        return redirect("/booking/$booking->id")->with('success', 'Berhasil melakukan pembayaran, silahkan tunggu konfirmasi dari admin');
+        return redirect("/booking/$booking->id")->with('toast_success', 'Berhasil melakukan pembayaran, silahkan tunggu konfirmasi dari admin');
+    }
+
+    public function cancelBooking($id)
+    {
+        $booking = Booking::findOrFail($id);
+        $booking->update([
+            'status' => 'Canceled',
+        ]);
+        $booking->save();
+
+        return redirect()->back()->with('toast_success', 'Berhasil membatalkan booking');
+    }
+
+    public function confirmBooking($id)
+    {
+        $booking = Booking::findOrFail($id);
+        $booking->update([
+            'status' => 'Success',
+        ]);
+        $booking->save();
+
+        return redirect()->back()->with('toast_success', 'Berhasil mengkonfirmasi booking');
     }
 }

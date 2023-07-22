@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TravelCompany;
 use Illuminate\Support\Facades\Storage;
 
 class TravelCompanyController extends Controller
@@ -38,7 +39,28 @@ class TravelCompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateCompany = $request->validate([
+            'name' => 'required|max:50|min:3',
+            'description' => 'required|max:255|min:3',
+            'email' => 'required|email:rfc,dns|unique:travel_companies,email',
+            'address' => 'required|max:100|min:3',
+            'phone_number' => 'required|max:15|min:10',
+            'logo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+
+        if ($request->hasFile('logo')) {
+            $validateCompany['logo'] = $request->file('logo')->store('company', 'public');
+        }
+
+        $validateCompany['user_id'] = auth()->user()->id;
+        $company = TravelCompany::create($validateCompany);
+
+        auth()->user()->update([
+            'travel_company_id' => $company->id,
+        ]);
+        auth()->user()->save();
+
+        return redirect('/')->with('success', 'Berhasil membuat profile company');
     }
 
     /**
@@ -105,5 +127,10 @@ class TravelCompanyController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public static function register()
+    {
+        return view('landing_page.register-company');
     }
 }
